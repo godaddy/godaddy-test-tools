@@ -1,0 +1,11 @@
+{
+  "root": true,
+  "parser": "espree",
+  "parserOptions": {
+    "ecmaVersion": 5,
+    "sourceType": "script"
+  },
+  "env": {
+    "es6": false
+  }
+}

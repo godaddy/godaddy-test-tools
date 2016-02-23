@@ -30,8 +30,7 @@ testTools(gulp, {
 
 ```
 
-Running `gulp help` will now show all the tasks and a description (if
-provided) for each of the tasks.
+Running `gulp help` will now show all the tasks and a description (if provided) for each of the tasks.
 
 
 ### Options
@@ -43,14 +42,17 @@ provided) for each of the tasks.
  - codeCoverageTestFiles: default `[options.unitTestFiles, options.integrationTestFiles]`
  - watchFiles: default: `[options.sourceFiles, options.unitTestFiles, options.integrationTestFiles]`
  - lint:
-     - files: a list of glob-able file paths to include in the lint checks. default: `['lib/**/*.js', 'test/**/*.js']`
-     - eslint: the argument passed to `gulp-eslint`. default: `require.resolve('godaddy-style/dist/.eslintrc')`. see: https://www.npmjs.com/package/gulp-eslint
-     - jshint: the argument passed to `gulp-jshint`. default: `require.resolve('godaddy-style/dist/.jshintrc')`. see: https://www.npmjs.com/package/gulp-jshint
-     - jscs: the argument passed to `gulp-jscs`. default: `require.resolve('godaddy-style/dist/.jscsrc')`. see: https://www.npmjs.com/package/gulp-jscs
-     - default: change the default linter from `eslint`
-     - linters: change which linters are run when calling `gulp lint`
-     - eslintFailOnError: failure after the first lint error is found.
-       default: fail after all files have been linted
+    - filenameConvention: example: `{ type: (kebob, snake, camel), exclude: /regex/, files: ['lib/**/*.js', 'test/**/*.js'] }`
+    - files: a list of glob-able file paths to include in the lint checks. default: `['lib/**/*.js', 'test/**/*.js']`
+    - eslint: the argument passed to `gulp-eslint`. default: `require.resolve('godaddy-style/dist/.eslintrc')`. see: https://www.npmjs.com/package/gulp-eslint
+    - jshint: the argument passed to `gulp-jshint`. default: `require.resolve('godaddy-style/dist/.jshintrc')`. see: https://www.npmjs.com/package/gulp-jshint
+    - jscs: the argument passed to `gulp-jscs`. default: `require.resolve('godaddy-style/dist/.jscsrc')`. see: https://www.npmjs.com/package/gulp-jscs
+      - files: specify which files should be ran through jscs
+      - reporter: optional: [fail, failOnError]
+    - default: change the default linter from `eslint`
+    - linters: change which linters are run when calling `gulp lint`
+    - eslintFailOnError: failure after the first lint error is found.
+      default: fail after all files have been linted
  - es6: Specifies that your code is written in ES6 (+ JSX). You must also name your gulpfile `gulpfile.babel.js`. Defaults to `false`.
 
 This tool defaults to a specific folder structure, but the options above

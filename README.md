@@ -39,8 +39,9 @@ Running `gulp help` will show all the tasks and a description (if provided) for 
  - sourceFiles: The source files that will be watched and code coverage. default: `lib/**/*.js`
  - unitTestFiles: A glob-able path(s) to all the unit test files. default: `test/unit/**/*.js`
  - integrationTestFiles: A glob-able path(s) to all the integration test files. defaut: `test/integration/**/*.js`
+ - functionalTestFiles: A glob-able path(s) to all the functional test files. defaut: `test/functional/**/*.js`
  - istanbul: Options for [`gulp-istanbul`](https://www.npmjs.com/package/gulp-istanbul)
- - watchFiles: default: `[sourceFiles, unitTestFiles, integrationTestFiles]`
+ - watchFiles: default: `[sourceFiles, unitTestFiles, integrationTestFiles, functionalTestFiles]`
  - lint:
     - filenameConvention: example: `{ type: (kebob, snake, camel), exclude: /regex/, files: ['lib/**/*.js', 'test/**/*.js'] }`
     - files: a list of glob-able file paths to include in the lint checks.
@@ -50,6 +51,7 @@ Running `gulp help` will show all the tasks and a description (if provided) for 
             sourceFiles,
             unitTestFiles,
             integrationTestFiles,
+            functionalTestFiles,
             'index.js',
             'main.js',
             'gulpfile.js',
@@ -71,6 +73,7 @@ Running `gulp help` will show all the tasks and a description (if provided) for 
               options.sourceFiles,
               options.unitTestFiles,
               options.integrationTestFiles,
+              options.functionalTestFiles,
               'index.js',
               'main.js',
               'gulpfile.js',
@@ -94,6 +97,7 @@ your-project/
   test/
     unit/
     integration/
+    functional/
 ```
 
 Additionally, this project will send system notifications through

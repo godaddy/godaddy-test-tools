@@ -35,6 +35,7 @@ Running `gulp help` will show all the tasks and a description (if provided) for 
 
 ### Options
  - es6: Specifies that your code is written in ES6 (+ JSX). You must also name your gulpfile `gulpfile.babel.js`. Defaults to `false`.
+ - allowUnhandledRejections: The test tools will not throw an exception when a promise has an unresolved rejection. Defaults to `false`.
  - reporter: The reporter to use for mocha. default: `process.env.MOCHA_REPORTER || 'spec'`
  - sourceFiles: The source files that will be watched and code coverage. default: `lib/**/*.js`
  - unitTestFiles: A glob-able path(s) to all the unit test files. default: `test/unit/**/*.js`

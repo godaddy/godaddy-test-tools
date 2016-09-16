@@ -41,6 +41,7 @@ Running `gulp help` will show all the tasks and a description (if provided) for 
  - unitTestFiles: A glob-able path(s) to all the unit test files. default: `test/unit/**/*.js`
  - integrationTestFiles: A glob-able path(s) to all the integration test files. defaut: `test/integration/**/*.js`
  - istanbul: Options for [`gulp-istanbul`](https://www.npmjs.com/package/gulp-istanbul)
+ - mocha: Options for [`gulp-mocha`](https://www.npmjs.com/package/gulp-mocha)
  - watchFiles: default: `[sourceFiles, unitTestFiles, integrationTestFiles]`
  - lint:
     - filenameConvention: example: `{ type: (kebob, snake, camel), exclude: /regex/, files: ['lib/**/*.js', 'test/**/*.js'] }`

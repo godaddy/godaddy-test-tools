@@ -85,6 +85,10 @@ Running `gulp help` will show all the tasks and a description (if provided) for 
     - eslintFailOnError: failure after the first lint error is found.
         default: fail after all files have been linted
 
+Options can be modified from the command line using dot separated
+argument names. i.e.: `gulp unit --mocha.grep '@production'` will set
+the `grep` value of the `mocha` options.
+
 This tool defaults to a specific folder structure, but the options above
 allow for configuring that as needed:
 

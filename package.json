@@ -1,6 +1,6 @@
 {
   "name": "godaddy-test-tools",
-  "version": "5.2.0",
+  "version": "6.0.0",
   "description": "Gulp tools for simplifying the testing of node libraries with mocha and istanbul",
   "main": "index.js",
   "scripts": {

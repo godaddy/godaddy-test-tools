@@ -35,8 +35,9 @@ Running `gulp help` will show all the tasks and a description (if provided) for 
 
 ### Options
  - es6: Specifies that your code is written in ES6 (+ JSX). You must also name your gulpfile `gulpfile.babel.js`. Defaults to `true`.
- - junit: Use junit reporting for the currently run task and output to the specified file (Currently supported by unit, integration,
-   eslint and respective coverage tasks).
+ - junit: Use junit reporting for the currently run task and output to the specified file. If has a string value, it will be interpretted
+   as the file where the results should be written, if simply present, the argument will trigger the junit default file at
+   `./build/test/*-results.xml`. This options is currently supported by unit, integration, eslint and respective coverage tasks.
  - allowUnhandledRejections: The test tools will not throw an exception when a promise has an unresolved rejection. Defaults to `false`.
  - sourceFiles: The source files that will be watched and code coverage. default: `lib/**/*.js`
  - unitTestFiles: A glob-able path(s) to all the unit test files. default: `test/unit/**/*.js`

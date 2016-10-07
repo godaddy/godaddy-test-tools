@@ -40,6 +40,7 @@
     "mocha-junit-reporter": "^1.12.0",
     "node-notifier": "^4.2.3",
     "one-time": "*",
+    "rimraf": "^2.5.4",
     "through2": "^2.0.0",
     "yargs": "*"
   }

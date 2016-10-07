@@ -45,6 +45,10 @@ Running `gulp help` will show all the tasks and a description (if provided) for 
  - istanbul: Options for [`gulp-istanbul`](https://www.npmjs.com/package/gulp-istanbul)
  - mocha: Options for [`gulp-mocha`](https://www.npmjs.com/package/gulp-mocha)
  - watchFiles: default: `[sourceFiles, unitTestFiles, integrationTestFiles]`
+ - shrinkwrap:
+    - removeExisting: remove the existing files by default, default: false
+    - onlyFormat: only remove the artifacts from the existing npm-shrinkwrap.json file, default: false
+    - dev: include devDependencies in shrinkwrap, default: true
  - lint:
     - filenameConvention: example: `{ type: (kebob, snake, camel), exclude: /regex/, files: ['lib/**/*.js', 'test/**/*.js'] }`
     - files: a list of glob-able file paths to include in the lint checks.

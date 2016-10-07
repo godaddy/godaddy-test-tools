@@ -46,7 +46,7 @@ Running `gulp help` will show all the tasks and a description (if provided) for 
  - mocha: Options for [`gulp-mocha`](https://www.npmjs.com/package/gulp-mocha)
  - watchFiles: default: `[sourceFiles, unitTestFiles, integrationTestFiles]`
  - shrinkwrap:
-    - removeExisting: remove the existing files by default, default: true
+    - removeExisting: remove the existing files by default, default: false
     - onlyFormat: only remove the artifacts from the existing npm-shrinkwrap.json file, default: false
     - dev: include devDependencies in shrinkwrap, default: true
  - lint:

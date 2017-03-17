@@ -69,23 +69,6 @@ Running `gulp help` will show all the tasks and a description (if provided) for 
           ]
         ```
     - eslint: the argument passed to [`gulp-eslint`](https://www.npmjs.com/package/gulp-eslint). default: `require.resolve('godaddy-style/dist/es5/.eslintrc')`.
-    - jshint: the argument passed to [`gulp-jshint`](https://www.npmjs.com/package/gulp-jshint). default: `require.resolve('godaddy-style/dist/.jshintrc')`.
-    - jscs: the argument passed to [`gulp-jscs`](https://www.npmjs.com/package/gulp-jscs). default: `require.resolve('godaddy-style/dist/es5/.jscsrc')`.
-      - reporter: optional: [fail, failOnError]
-      - files: specify which files should be ran through jscs
-          default:
-          ```js
-            [
-              options.sourceFiles,
-              options.unitTestFiles,
-              options.integrationTestFiles,
-              'index.js',
-              'main.js',
-              'gulpfile.js',
-              'gulpfile.babel.js',
-              'config/**/*.js'
-            ]
-          ```
     - default: change the default linter from `eslint`
     - linters: change which linters are run when calling `gulp lint`
     - eslintFailOnError: failure after the first lint error is found.

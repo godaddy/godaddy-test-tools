@@ -25,7 +25,7 @@
   "dependencies": {
     "babel-eslint": "^7.1.1",
     "del": "^2.0.2",
-    "eslint": "^4.2.0",
+    "eslint": "^3.15.0",
     "eslint-config-godaddy": "^1.0.0",
     "eslint-config-godaddy-es5": "^1.0.0",
     "eslint-config-godaddy-react": "^1.0.0",

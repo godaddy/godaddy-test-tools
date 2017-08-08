@@ -102,5 +102,5 @@ you pass the `--no-notify` option.
 
 9.x.x:
 * No `baseConfig` is defined by default anymore.
-* `es6` option was removed and became the default. This also means that the `istanbul.instrumenter` option became the `isparta.Instrumenter` buy default. If you want to keep the previous behavior, you can pass the `{ instanbul: { instrumenter: null } }` as option.
+* `es6` option was removed and became the default. This also means that the `istanbul.instrumenter` option became the `isparta.Instrumenter` by default. If you want to keep the previous behavior, you can pass the `{ instanbul: { instrumenter: null } }` as option.
 

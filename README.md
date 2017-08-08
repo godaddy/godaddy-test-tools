@@ -37,7 +37,6 @@ Running `gulp help` will show all the tasks and a description (if provided) for 
 
 
 ### Options
- - es6: Specifies that your code is written in ES6 (+ JSX). You must also name your gulpfile `gulpfile.babel.js`. Defaults to `true`.
  - junit: Use junit reporting for the currently run task and output to the specified file. If has a string value, it will be interpretted
    as the file where the results should be written, if simply present, the argument will trigger the junit default file at
    `./build/test/*-results.xml`. This options is currently supported by unit, integration, eslint and respective coverage tasks.
@@ -98,3 +97,10 @@ Additionally, this project will send system notifications through
 [`node-notifier`](https://www.npmjs.com/package/node-notifier) when
 there are errors in your tests and when tests have run successfully unless
 you pass the `--no-notify` option.
+
+### Changelog
+
+9.x.x:
+* No `baseConfig` is defined by default anymore.
+* `es6` option was removed and became the default. This also means that the `istanbul.instrumenter` option became the `isparta.Instrumenter` buy default. If you want to keep the previous behavior, you can pass the `{ instanbul: { instrumenter: null } }` as option.
+

@@ -7,6 +7,9 @@
 npm install --save-dev godaddy-test-tools
 ```
 
+Also install one of the configuration packages part of the https://github.com/godaddy/javascript project.
+Choosing the configuration package depends on what packages your project will use.
+
 ... add the package to your `gulpfile.js`
 ```js
 'use strict';

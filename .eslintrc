@@ -1,5 +1,6 @@
 {
   "root": true,
+  "extends": "godaddy",
   "rules": {
     "strict": 0
   }

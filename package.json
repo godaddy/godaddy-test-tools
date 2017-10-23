@@ -32,7 +32,7 @@
     "gulp-eslint": "^4.0.0",
     "gulp-help": "^1.6.1",
     "gulp-istanbul": "^1.1.1",
-    "gulp-mocha": "^3.0.1",
+    "gulp-mocha": "^4.3.1",
     "gulp-sonar": "^3.0.0",
     "gulp-util": "^3.0.7",
     "isparta": "^4.0.0",

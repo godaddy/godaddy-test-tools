@@ -51,6 +51,7 @@ Running `gulp help` will show all the tasks and a description (if provided) for 
     - removeExisting: remove the existing files by default, default: false
     - onlyFormat: only remove the artifacts from the existing npm-shrinkwrap.json file, default: false
     - dev: include devDependencies in shrinkwrap, default: true
+    - file: the path to the shrinkwrap file. default: ./package-lock.json
  - lint:
     - filenameConvention: example: `{ type: (kebob, snake, camel), exclude: /regex/, files: ['lib/**/*.js', 'test/**/*.js'] }`
     - files: a list of glob-able file paths to include in the lint checks.

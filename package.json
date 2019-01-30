@@ -18,24 +18,23 @@
   "license": "MIT",
   "devDependencies": {
     "babel-eslint": "^8.2.3",
-    "eslint": "^5.2.0",
-    "eslint-config-godaddy": "^2.0.0",
+    "eslint": "^5.12.1",
+    "eslint-config-godaddy": "^3.0.0",
     "eslint-plugin-json": "^1.2.1",
-    "eslint-plugin-mocha": "^5.0.0",
-    "gulp": "^3.9.0"
+    "eslint-plugin-mocha": "^5.2.1",
+    "gulp": "^4.0.0"
   },
   "peerDependencies": {
-    "gulp": "*"
+    "gulp": "^4.0.0"
   },
   "dependencies": {
     "del": "^3.0.0",
+    "fancy-log": "^1.3.3",
     "gulp-eslint": "^5.0.0",
-    "gulp-help": "^1.6.1",
     "gulp-istanbul": "^1.1.3",
     "gulp-mocha": "^6.0.0",
-    "gulp-sonar": "^3.0.0",
-    "gulp-util": "^3.0.7",
-    "isparta": "^4.1.0",
+    "gulp-sonar2": "^3.1.2",
+    "isparta": "^4.1.1",
     "lodash": "^4.6.1",
     "mkdirp": "^0.5.1",
     "mocha-junit-reporter": "^1.12.0",

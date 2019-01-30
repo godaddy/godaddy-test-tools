@@ -15,7 +15,7 @@ Choosing the configuration package depends on what packages your project will us
 'use strict';
 
 var gulp = require('gulp');
-require('godaddy-test-tools')(gulp, {
+module.exports = require('godaddy-test-tools')(gulp, {
   // change any of the options listed below as needed
 });
 
@@ -27,13 +27,13 @@ require('godaddy-test-tools')(gulp, {
 import testTools from 'godaddy-test-tools';
 import gulp from 'gulp';
 
-testTools(gulp, {
+module.exports = testTools(gulp, {
   // change any of the options listed below as needed
 });
 
 ```
 
-Running `gulp help` will show all the tasks and a description (if provided) for each of the tasks.
+Running `gulp --tasks` will show all the tasks and a description (if provided) for each of the tasks.
 
 
 ### Options
@@ -100,6 +100,11 @@ there are errors in your tests and when tests have run successfully unless
 you pass the `--no-notify` option.
 
 ### Changelog
+
+12.x.x:
+* Gulp 4 is now required
+* You must now export the tasks returned by this function in your gulpfile 
+* `gulp help` no-longer works; use `gulp --tasks` to see available tasks
 
 9.x.x:
 * No `baseConfig` is defined by default anymore. Please extend the appropriate `eslint-config` package on your `eslintrc` file.

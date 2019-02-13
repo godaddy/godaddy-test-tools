@@ -15,7 +15,7 @@ Choosing the configuration package depends on what packages your project will us
 'use strict';
 
 var gulp = require('gulp');
-require('godaddy-test-tools')(gulp, {
+module.exports = require('godaddy-test-tools')(gulp, {
   // change any of the options listed below as needed
 });
 
@@ -27,24 +27,23 @@ require('godaddy-test-tools')(gulp, {
 import testTools from 'godaddy-test-tools';
 import gulp from 'gulp';
 
-testTools(gulp, {
+module.exports = testTools(gulp, {
   // change any of the options listed below as needed
 });
 
 ```
 
-Running `gulp help` will show all the tasks and a description (if provided) for each of the tasks.
+Running `gulp --tasks` will show all the tasks and a description (if provided) for each of the tasks.
 
 
 ### Options
  - junit: Use junit reporting for the currently run task and output to the specified file. If has a string value, it will be interpretted
    as the file where the results should be written, if simply present, the argument will trigger the junit default file at
-   `./build/test/*-results.xml`. This options is currently supported by unit, integration, eslint and respective coverage tasks.
+   `./build/test/*-results.xml`. This options is currently supported by unit, integration, and eslint tasks.
  - allowUnhandledRejections: The test tools will not throw an exception when a promise has an unresolved rejection. Defaults to `false`.
- - sourceFiles: The source files that will be watched and code coverage. default: `lib/**/*.js`
+ - sourceFiles: The source files that will be watched or tested. default: `lib/**/*.js`
  - unitTestFiles: A glob-able path(s) to all the unit test files. default: `test/unit/**/*.js`
  - integrationTestFiles: A glob-able path(s) to all the integration test files. defaut: `test/integration/**/*.js`
- - istanbul: Options for [`gulp-istanbul`](https://www.npmjs.com/package/gulp-istanbul)
  - mocha: Options for [`gulp-mocha`](https://www.npmjs.com/package/gulp-mocha)
  - watchFiles: default: `[sourceFiles, unitTestFiles, integrationTestFiles]`
  - shrinkwrap:
@@ -87,7 +86,6 @@ allow for configuring that as needed:
 ```
 your-project/
   build/
-    coverage/
   lib/
   test/
     unit/
@@ -100,6 +98,12 @@ there are errors in your tests and when tests have run successfully unless
 you pass the `--no-notify` option.
 
 ### Changelog
+
+12.x.x:
+* Gulp 4 is now required
+* Code coverage tasks are removed and [nyc](https://www.npmjs.com/package/nyc) package is recommended
+* You must now export the tasks returned by this function in your gulpfile
+* `gulp help` no-longer works; use `gulp --tasks` to see available tasks
 
 9.x.x:
 * No `baseConfig` is defined by default anymore. Please extend the appropriate `eslint-config` package on your `eslintrc` file.

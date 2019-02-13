@@ -1,6 +1,6 @@
 'use strict';
 
-require('./lib/index.js')(require('gulp'), {
+module.exports = require('./lib/index.js')(require('gulp'), {
   lint: {
     eslint: {
       fix: true

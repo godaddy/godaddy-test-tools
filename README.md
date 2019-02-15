@@ -99,6 +99,10 @@ you pass the `--no-notify` option.
 
 ### Changelog
 
+12.0.1:
+* When tests fail, the process should throw the error instead of only
+  displaying it in stdout/stderr
+
 12.x.x:
 * Gulp 4 is now required
 * Code coverage tasks are removed and [nyc](https://www.npmjs.com/package/nyc) package is recommended

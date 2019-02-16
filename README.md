@@ -99,6 +99,10 @@ you pass the `--no-notify` option.
 
 ### Changelog
 
+12.0.2:
+* use _result instead of end event for identifying the tests have
+  completed
+
 12.0.1:
 * When tests fail, the process should throw the error instead of only
   displaying it in stdout/stderr

@@ -44,7 +44,7 @@ Running `gulp --tasks` will show all the tasks and a description (if provided) f
  - sourceFiles: The source files that will be watched or tested. default: `lib/**/*.js`
  - unitTestFiles: A glob-able path(s) to all the unit test files. default: `test/unit/**/*.js`
  - integrationTestFiles: A glob-able path(s) to all the integration test files. defaut: `test/integration/**/*.js`
- - mocha: Options for [`gulp-mocha`](https://www.npmjs.com/package/gulp-mocha)
+ - mocha: Options for [`mocha`](https://mochajs.org/#command-line-usage), note all keys in the options will be prefixed with `--` to map to the CLI flag. Example `{ require: ['@babel/register'] }` will convert to `--require "@babel/register"`.
  - watchFiles: default: `[sourceFiles, unitTestFiles, integrationTestFiles]`
  - shrinkwrap:
     - removeExisting: remove the existing files by default, default: false
@@ -99,8 +99,18 @@ you pass the `--no-notify` option.
 
 ### Changelog
 
+14.0.0:
+* Replace `gulp-mocha` with calling `mocha` directly via [cross-spawn](https://www.npmjs.com/package/cross-spawn). Consumer must have `mocha` installed and all setup requirements must be defined in the mocha [options](#options).
+```js
+// mocha@5+
+mocha: {
+  ...
+  file: "test/unit/global-hooks.js" // setup loaded prior to root suite execution
+}
+```
+
 12.0.2:
-* use _result instead of end event for identifying the tests have
+* Use _result instead of end event for identifying the tests have
   completed
 
 12.0.1:

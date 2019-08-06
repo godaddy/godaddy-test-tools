@@ -39,7 +39,8 @@
     "pre-push": "^0.1.1"
   },
   "peerDependencies": {
-    "gulp": "^4.0.0"
+    "gulp": "^4.0.0",
+    "mocha": "*"
   },
   "dependencies": {
     "del": "^5.0.0",

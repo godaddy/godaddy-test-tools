@@ -99,6 +99,12 @@ you pass the `--no-notify` option.
 
 ### Changelog
 
+16.0.0:
+* Due to dependency bumps for security fixes, node 8 is no-longer supported; official support is now declared to be node 10 or above.
+
+15.0.0:
+* This was an erroneous major version bump
+
 14.0.0:
 * Replace `gulp-mocha` with calling `mocha` directly via [cross-spawn](https://www.npmjs.com/package/cross-spawn). Consumer must have `mocha` installed and all setup requirements must be defined in the mocha [options](#options).
 ```js

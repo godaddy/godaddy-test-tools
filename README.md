@@ -99,6 +99,9 @@ you pass the `--no-notify` option.
 
 ### Changelog
 
+17.0.0:
+* The watch command no longer exits if errors are encountered in tests
+
 16.0.0:
 * Due to dependency bumps for security fixes, node 8 is no-longer supported; official support is now declared to be node 10 or above.
 
